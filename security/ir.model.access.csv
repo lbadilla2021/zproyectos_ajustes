@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_it_tipo_trabajo_project_manager,it.tipo.trabajo project manager,model_it_tipo_trabajo,project.group_project_manager,1,1,1,1
+access_it_tipo_servicio_project_manager,it.tipo.servicio project manager,model_it_tipo_servicio,project.group_project_manager,1,1,1,1
+access_it_funcion_project_manager,it.funcion project manager,zhr_ajustes.model_it_funcion,project.group_project_manager,1,0,0,0
+access_it_funcion_project_user,it.funcion project user,zhr_ajustes.model_it_funcion,project.group_project_user,1,0,0,0
+access_it_equipo_project_manager,it.equipo project manager,model_it_equipo,project.group_project_manager,1,1,1,1
+access_it_equipo_project_user,it.equipo project user,model_it_equipo,project.group_project_user,1,0,0,0
+access_project_persona_asignada_project_user,project.persona.asignada project user,model_project_persona_asignada,project.group_project_user,1,1,1,1
+access_hr_employee_project_user,hr.employee project user,hr.model_hr_employee,project.group_project_user,1,0,0,0
+access_hr_city_project_user,hr.city project user,zhr_ajustes.model_hr_city,project.group_project_user,1,0,0,0
+access_resource_calendar_project_user,resource.calendar project user,resource.model_resource_calendar,project.group_project_user,1,0,0,0

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="project_stage_licitacion" model="project.project.stage">
+        <field name="name">Licitacion</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="project_stage_perdido" model="project.project.stage">
+        <field name="name">Perdido</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="project_stage_adjudicado" model="project.project.stage">
+        <field name="name">Adjudicado</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="project_stage_planificado" model="project.project.stage">
+        <field name="name">Planificado</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="project_stage_en_ejecucion" model="project.project.stage">
+        <field name="name">En Ejecución</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <record id="project_stage_por_cobrar" model="project.project.stage">
+        <field name="name">Por cobrar</field>
+        <field name="sequence">60</field>
+    </record>
+
+    <record id="project_stage_facturado" model="project.project.stage">
+        <field name="name">Facturado</field>
+        <field name="sequence">70</field>
+    </record>
+
+    <function model="project.project" name="ensure_default_barca_project_stage"/>
+</odoo>

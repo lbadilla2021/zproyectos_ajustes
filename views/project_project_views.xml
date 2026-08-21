@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_project_project_form_barca" model="ir.ui.view">
+        <field name="name">project.project.form.barca</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='description']" position="after">
+                <page string="Proyecto Barca" name="proyecto_barca">
+                    <group>
+                        <group string="Cliente">
+                            <field name="establecimiento_id" options="{'no_create_edit': True}"/>
+                            <field name="ito"/>
+                            <field name="numero_pedido"/>
+                        </group>
+                        <group string="Servicio">
+                            <field name="tipo_trabajo_id"/>
+                            <field name="tipo_servicio_id"/>
+                            <field name="cantidad_turnos"/>
+                            <field name="cantidad_equipos"/>
+                            <field name="duracion_horas"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="observacion"/>
+                    </group>
+                    <group>
+                        <group string="Fechas">
+                            <field name="fecha_adjudicacion"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//notebook/page[@name='analytic']/group" position="inside">
+                <group string="Valores">
+                    <field name="valor_adjudicado"/>
+                    <field name="valor_final"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_project_project_list_barca" model="ir.ui.view">
+        <field name="name">project.project.list.barca</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="establecimiento_id" optional="show"/>
+                <field name="tipo_trabajo_id" optional="show"/>
+                <field name="tipo_servicio_id" optional="show"/>
+            </field>
+        </field>
+    </record>
+</odoo>

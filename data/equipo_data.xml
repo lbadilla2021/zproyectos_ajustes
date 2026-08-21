@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="it_equipo_spot" model="it.equipo">
+        <field name="name">Spot</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="it_equipo_fijo" model="it.equipo">
+        <field name="name">Fijo</field>
+        <field name="sequence">20</field>
+    </record>
+</odoo>

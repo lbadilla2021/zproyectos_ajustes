@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Compatibilidad: este archivo existia en la version anterior del modulo.
+         La ficha Barca ahora vive en project.project. -->
+</odoo>

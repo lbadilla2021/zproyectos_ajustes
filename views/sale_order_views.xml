@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_informe_servicio" model="ir.ui.view">
+        <field name="name">sale.order.form.proyecto.legacy.disabled</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="active" eval="False"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <field name="id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_list_faena" model="ir.ui.view">
+        <field name="name">sale.order.list.proyecto.legacy.disabled</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
+        <field name="active" eval="False"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <field name="id" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form_barca_project" model="ir.ui.view">
+        <field name="name">sale.order.form.barca.project</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="active" eval="False"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='other_information']" position="inside">
+                <group string="Proyecto">
+                    <field name="barca_project_id" options="{'no_create': True}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_list_barca_project" model="ir.ui.view">
+        <field name="name">sale.order.list.barca.project</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
+        <field name="active" eval="False"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="barca_project_id" optional="show"/>
+            </field>
+        </field>
+    </record>
+</odoo>
